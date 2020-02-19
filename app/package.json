@@ -1,0 +1,35 @@
+{
+  "name": "browser-native-media-controls",
+  "version": "1.0.0",
+  "description": "App to control media in browser",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "npmpd",
+    "start": "electron src/main.js",
+    "dev": "DEBUG=1 electron src/main.js"
+  },
+  "repository": "",
+  "keywords": [
+    "yandex",
+    "apple",
+    "music",
+    "controls",
+    "native",
+    "electron"
+  ],
+  "author": "mmetelskiy",
+  "license": "GPL 3.0",
+  "devDependencies": {
+    "electron": "6.0.10",
+    "electron-reload": "1.5.0"
+  },
+  "dependencies": {
+    "lodash": "4.17.15",
+    "mpris-service": "^2.1.0",
+    "npm-platform-dependencies": "0.1.0",
+    "socket.io": "2.3.0"
+  },
+  "linuxDependencies": {
+    "mpris-service": "2.1.0"
+  }
+}

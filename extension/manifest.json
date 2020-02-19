@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Native Media Controls",
+  "version": "0.1",
+  "permissions": [
+    "http://*/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'; connect-src http://localhost:3007",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.music.yandex.ru/*",
+        "*://*.music.yandex.net/*",
+        "*://*.music.yandex.ua/*",
+        "*://*.music.yandex.by/*",
+        "*://*.musi.sh/*"
+      ],
+      "js": ["dist/page-script.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["dist/background-script.js"]
+  }
+}
